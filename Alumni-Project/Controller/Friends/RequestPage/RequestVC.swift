@@ -20,6 +20,8 @@ class RequestVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         requestTable.layer.borderColor = UIColor.gray.cgColor
         requestTable.layer.borderWidth = 0.2
         requestTable.layer.cornerRadius = requestTable.frame.height / 30
+        
+        requestTable.estimatedRowHeight = 70
     }
 
     
