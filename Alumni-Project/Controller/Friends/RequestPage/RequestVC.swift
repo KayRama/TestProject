@@ -12,7 +12,7 @@ class RequestVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
    
     @IBOutlet weak var requestTable: UITableView!
     
-    var arrayName = ["Antonius", "Fahri", "Cahaya Ramadhan"]
+    var arrayName = ["Antonius", "Fahri", "Cahaya Ramadhan", "Cahaya Ramadhan Cahaya Ramadhan Cahaya Ramadhan"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,7 @@ class RequestVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         requestTable.layer.borderColor = UIColor.gray.cgColor
         requestTable.layer.borderWidth = 0.2
         requestTable.layer.cornerRadius = requestTable.frame.height / 30
-        requestTable.rowHeight = UITableView.automaticDimension
     }
-    
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,9 +38,14 @@ class RequestVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         cell.imageMutual2.clipsToBounds = true
         
         cell.nameLabel.text = arrayName[indexPath.row]
+        cell.nameLabel.sizeToFit()
         
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
 
