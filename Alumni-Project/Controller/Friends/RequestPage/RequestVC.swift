@@ -22,6 +22,7 @@ class RequestVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         requestTable.layer.cornerRadius = requestTable.frame.height / 30
         
         requestTable.estimatedRowHeight = 70
+        requestTable.tableFooterView = UIView()
     }
 
     
